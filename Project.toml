@@ -1,6 +1,6 @@
 name = "HarfBuzz_jll"
 uuid = "2e76f6c2-a576-52d4-95c1-20adfe4de566"
-version = "8.3.1+0"
+version = "8.5.0+0"
 
 [deps]
 Artifacts = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
@@ -16,8 +16,8 @@ Libffi_jll = "e9f186c6-92d2-5b65-8a66-fee21dc1b490"
 [compat]
 JLLWrappers = "1.2.0"
 julia = "1.6"
-FreeType2_jll = "2.10.4"
+FreeType2_jll = "2.13.3"
 Libdl = "< 0.0.1, 1"
-Glib_jll = "2.68.1"
+Glib_jll = "2.82.2"
 Artifacts = "< 0.0.1, 1"
 Libffi_jll = "~3.2.2"
