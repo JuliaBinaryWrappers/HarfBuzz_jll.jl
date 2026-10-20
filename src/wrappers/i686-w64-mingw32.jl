@@ -9,8 +9,8 @@ using Graphite2_jll
 using Libffi_jll
 JLLWrappers.@generate_wrapper_header("HarfBuzz")
 JLLWrappers.@declare_library_product(libharfbuzz, "libharfbuzz-0.dll")
-JLLWrappers.@declare_library_product(libharfbuzz_gobject, "libharfbuzz-gobject-0.dll")
 JLLWrappers.@declare_library_product(libharfbuzz_subset, "libharfbuzz-subset-0.dll")
+JLLWrappers.@declare_library_product(libharfbuzz_gobject, "libharfbuzz-gobject-0.dll")
 function __init__()
     JLLWrappers.@generate_init_header(Cairo_jll, Fontconfig_jll, FreeType2_jll, Glib_jll, Graphite2_jll, Libffi_jll)
     JLLWrappers.@init_library_product(
@@ -20,14 +20,14 @@ function __init__()
     )
 
     JLLWrappers.@init_library_product(
-        libharfbuzz_gobject,
-        "bin\\libharfbuzz-gobject-0.dll",
+        libharfbuzz_subset,
+        "bin\\libharfbuzz-subset-0.dll",
         RTLD_LAZY | RTLD_DEEPBIND,
     )
 
     JLLWrappers.@init_library_product(
-        libharfbuzz_subset,
-        "bin\\libharfbuzz-subset-0.dll",
+        libharfbuzz_gobject,
+        "bin\\libharfbuzz-gobject-0.dll",
         RTLD_LAZY | RTLD_DEEPBIND,
     )
 
